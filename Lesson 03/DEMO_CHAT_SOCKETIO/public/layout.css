@@ -1,0 +1,57 @@
+
+body{
+    background-color: #ebeef4;
+}
+#wrapper{
+    width: 600px;
+    margin: auto;
+}
+.loginForm{
+    margin-bottom: 10px;
+}
+#txtUsername{
+    background-color: transparent;
+    border:solid 1px black;
+}
+#left, #right{
+    min-height: 300px;
+}
+.left{
+    width: 17%;
+    float: left;
+    background-color: #f0f2d0;
+}
+.right{
+    width: 83%;
+    float: right;
+    background-color: #d4f9f8;
+}
+.boxTittle{
+    padding: 5px;
+    border: solid 1px black;
+    text-align: center;
+    font-weight: bold;
+}
+.boxContent{
+    border: solid 1px black;
+    border-top: none;
+    padding: 5px;
+    text-align: center;
+}
+.sayHi{
+    text-align: right;
+}
+#listMessage{
+    height: 600px;
+    background-color: #fcead4;
+    position: relative;
+}
+#txtMessage{
+    background-color: transparent;
+    border: solid 1px black;
+}
+.thongbao{
+    position: absolute;
+    top: 97%;
+    opacity: 0.6;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.js"></script>
+    <script src="socket.io/socket.io.js"></script>
+    <script>
+        // goi dien len server
+        var socket = io('http://localhost:1981')
+        socket.on('Server-send-data', function(data){
+            $('#noidung').append(data+ ', ')
+        })
+        $(document).ready(function(){
+            $('#mrA').click(function(){
+                socket.emit('Client-send-data','mẹ mày béo')
+            })
+        })
+        socket.on('server-send-mau', function(data){
+            $('body').attr('bgColor', data)
+        })
+        $(document).ready(function(){
+            $('#red').click(function(){
+                socket.emit('Client-send-mau','red')
+            })
+            $('#blu').click(function(){
+                socket.emit('Client-send-mau','blue')
+            })
+            $('#ye').click(function(){
+                socket.emit('Client-send-mau','yellow')
+            })
+        })
+    </script>
+    <title>Lesson 02</title>
+    <style>
+        #red,#blu,#ye{
+            width: 50px;
+            height: 25px;
+        }
+        #red{
+            background-color: red;
+        }
+        #blu{
+            background-color: blue;
+        }
+        #ye{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body bgColor="pink">
+    <button id="mrA">Click send</button>
+    <button id="red"></button>
+    <button id="blu"></button>
+    <button id="ye"></button>
+    <h2 id="noidung"></h2>
+</body>
+</html>
