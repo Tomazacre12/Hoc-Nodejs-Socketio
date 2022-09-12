@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo chat</title>
+    <script src="jquery.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="xuly.js">
+    </script>
+    <link rel="stylesheet" type="text/css" href="layout.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div id="information">
+            <input id="txtHoten" placeholder="Ho ten" type="text">
+            <input id="txtEmail" placeholder="Email" type="text">
+            <input id="txtSoDT" placeholder="Dien Thoai" type="text">
+            <input type="button" id="btnRegister" value="Send">
+        </div>
+        <div id="listUsers">
+            <h3>Danh sach hoc vien</h3>
+            <div id="ds">
+              
+            </div>
+        </div>
+    </div>
+</body>
+</html>
