@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo chat</title>
+    <script src="jquery.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="xuly.js">
+    </script>
+    <link rel="stylesheet" type="text/css" href="layout.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>DEMO CHAT SOCKER IO - NODEJS</h1>
+        <input id="txtUser" placeholder="Username" type="text"/>
+        <input id="btnDangki" value="Dang ki" type="button"/>
+        <br>
+        <div id="left">
+            <div id="title">
+                Users Online
+            </div>
+            <div id="danhsachUsersOnline">
+
+            </div>
+        </div>
+        <div id="right">
+            <input id="txtMessage" placeholder="Message..." type="text"/>
+            <input id="btnChat" type="button" value="chat"/>
+            <br>
+            <div id="dsMsg"></div>
+        </div>
+    </div>
+</body>
+</html>
