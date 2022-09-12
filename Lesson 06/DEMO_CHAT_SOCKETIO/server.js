@@ -25,6 +25,9 @@ io.on('connection', function(socket){
     socket.on('client_gui_message', function(data){
         io.sockets.emit('server_gui_message', {username:socket.Username, msg:data})
     })
+    socket.on('user-choc-id', function(data){
+        io.to(data).emit('server_xuly_choc', socket.Username)
+    })
 })
 
 app.get('/', function(req, res){

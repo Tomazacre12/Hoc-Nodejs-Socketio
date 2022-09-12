@@ -40,3 +40,12 @@ h1{
 .motUser{
     margin: 5px;
 }
+.hoten{
+    color: red;
+    font-weight: bold;
+}
+#dsMsg{
+    height: 450px;
+    overflow-y: scroll;
+    clear: both;
+}
